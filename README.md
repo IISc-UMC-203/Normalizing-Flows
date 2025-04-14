@@ -67,7 +67,6 @@ The project aims to provide a practical understanding of normalizing flows and d
 1.  **Train RealNVP on 2D Moons dataset and generate animation frames:**
     ```bash
     python scripts/train_realnvp_2d.py --dataset moons --epochs 3000 --save_interval 10 --output_dir results/animations/moons
-    # After training, compile frames into a GIF (e.g., using imageio or external tool)
     ```
 
 2.  **Train RealNVP on MNIST:**
@@ -82,21 +81,8 @@ The project aims to provide a practical understanding of normalizing flows and d
 
 4.  **Generate MNIST Latent Space Interpolation Visualization:**
     ```bash
-    # Example using a script:
     python scripts/generate_mnist_interpolation.py --checkpoint results/models/realnvp_mnist.pth --idx1 1 --idx2 7 --steps 10 --output results/animations/mnist_interp_1_7.gif
     ```
-## Project Structure:
-   normalizing-flows
-   ├── .gitignore # Files ignored by git
-   ├── LICENSE # Project license
-   ├── README.md # This file
-   ├── requirements.txt # Python dependencies
-   │
-   ├── src # Core source code (models, layers, losses, utils)
-   ├── scripts # Runnable scripts for training, evaluation, generation
-   ├── notebooks # Jupyter notebooks for demos and visualization
-   ├── data # Data loading instructionsscripts (if needed)
-   └── results # Default directory for outputs (models, plots, animations)
 
 *   **RealNVP BPD:** Achieved **1.59 BPD** on MNIST and **3.78 BPD** on CIFAR-10, demonstrating successful implementation (though further training could potentially improve scores, limited by compute).
 *   **Visualizations:** Successfully generated animations showing 2D flow dynamics and smooth semantic interpolations in MNIST's latent space.
