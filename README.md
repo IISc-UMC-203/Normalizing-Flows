@@ -1,5 +1,5 @@
 # Normalizing-Flows
-This repository primarily consists of:
+This folder primarily consists of:
 
 1.  **Implementations of the RealNVP Normalizing Flow architecture** \[[1]\]:
     *   Core affine coupling layers and model structure.
@@ -11,9 +11,6 @@ This repository primarily consists of:
 3.  **Visualization Tools:**
     *   Code to generate animations visualizing the 2D data-to-latent space transformation learned by RealNVP.
     *   Code to explore the learned latent space of MNIST via interactive interpolation between digit classes.
-4.  **Implementations of Invertible Neural Networks (INNs)** \[[2]\] for Inverse Problems:
-    *   Application of the INN framework (using RealNVP components) to solve the Gaussian Mixture Model (GMM) conditional generation task.
-    *   Application of the INN framework to solve the Inverse Kinematics (IK) problem, demonstrating posterior sampling of valid configurations.
 
 The project aims to provide a practical understanding of normalizing flows and demonstrate their utility in analyzing complex, potentially multi-modal inverse problems.
 ## Features
@@ -22,13 +19,11 @@ The project aims to provide a practical understanding of normalizing flows and d
 *   **Multi-Scale Architecture:** Adapted RealNVP for image data (MNIST, CIFAR-10) using channel padding, squeeze operations, and factor-out mechanisms.
 *   **2D Flow Visualization:** Scripts to train RealNVP on 2D datasets and generate animations of the data-to-latent transformation.
 *   **MNIST Latent Space Interpolation:** Script/notebook demonstrating smooth interpolation between digit classes in the learned latent space.
-*   **INN for GMM:** Implementation tackling the GMM inverse problem, demonstrating conditional generation and multi-modal posterior estimation.
-*   **INN for Inverse Kinematics:** Implementation solving the IK problem, visualizing multiple valid arm configurations for a given target.
-*   **Training & Evaluation:** Scripts for training models (NLL loss for RealNVP, combined losses for INN) and evaluating BPD on image datasets.
+*   **Training & Evaluation:** Scripts for training models (NLL loss for RealNVP) and evaluating BPD on image datasets.
 
 ## Requirements
 
-*   Python 3.8+
+*   Python 3.11+
 *   PyTorch (version 1.x or 2.x recommended)
 *   Torchvision
 *   NumPy
@@ -84,7 +79,7 @@ The project aims to provide a practical understanding of normalizing flows and d
     python scripts/generate_mnist_interpolation.py --checkpoint results/models/realnvp_mnist.pth --idx1 1 --idx2 7 --steps 10 --output results/animations/mnist_interp_1_7.gif
     ```
 
-*   **RealNVP BPD:** Achieved **1.59 BPD** on MNIST and **3.78 BPD** on CIFAR-10, demonstrating successful implementation (though further training could potentially improve scores, limited by compute).
+*   **RealNVP BPD:** Achieved **1.59 BPD** on MNIST and **3.78 BPD** on CIFAR-10, demonstrating successful implementation (though further training could potentially improve scores, limited by computing resources).
 *   **Visualizations:** Successfully generated animations showing 2D flow dynamics and smooth semantic interpolations in MNIST's latent space.
 
 ## Note : This Repo will give you a strong foundation of Normalizing flows before understanding the implementation of the inverse kinematics problem using Invertible Neural Networks
