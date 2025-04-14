@@ -42,7 +42,7 @@ All required Python packages are listed in `requirements.txt`.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url> # Replace with your repository URL
+    git clone https://github.com/IISc-UMC-203/Normalizing-Flows.git
     cd normalizing-flows
     ```
 
