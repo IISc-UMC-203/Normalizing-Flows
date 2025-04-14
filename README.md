@@ -66,33 +66,40 @@ All required Python packages are listed in `requirements.txt`.
 
 ## Project Structure:
 normalizing-flows/
-├── .gitignore         
-├── LICENSE            
-├── README.md          # Project overview, setup, usage instructions
-├── requirements.txt   # Python dependencies (run: pip install -r requirements.txt)
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
 │
-├── src/               # Core source code modules (imported by scripts)
-│   ├── layers.py      # Coupling layers, ResNet blocks, custom BatchNorm etc.
-│   ├── models_2d.py   # RealNVP model definition for 2D data
-│   ├── models_img.py  # RealNVP multi-scale model definition for images
-│   ├── losses.py      # NLL Loss function implementations
-│   ├── utils.py       # Preprocessing, masking, device setup, other helpers
-│   └── visualize.py   # Plotting and video generation functions
+├── src/
+│   ├── layers.py
+│   ├── models_2d.py
+│   ├── models_img.py
+│   ├── losses.py
+│   ├── utils.py
+│   └── visualize.py
 │
-├── scripts/          
-│   ├── train_realnvp_2d.py       # Train 2D models and save animation frames
-│   ├── train_realnvp_img.py      # Train MNIST/CIFAR-10 models & save checkpoints
-│   ├── generate_2d_video.py      # Compile 2D frames into an MP4 video
-│   └── generate_mnist_visuals.py # Generate MNIST samples & interpolation videos
+├── scripts/
+│   ├── train_realnvp_2d.py
+│   ├── train_realnvp_img.py
+│   ├── generate_2d_video.py
+│   └── generate_mnist_visuals.py
 │
-├── data/              # Directory for datasets 
+├── data/
+│   └── (datasets downloaded here automatically, typically gitignored)
 │
-└── results/           # Default output directory (often gitignored)
-    ├── realnvp_2d/    # Outputs from the 2D training script
-    │   ├── frames/    # Saved animation frames (in subdirs per dataset, e.g., 'moons')
-    │   └── models/    # Saved 2D models (if --save_model is used)
-    ├── checkpoints/   # Saved image model checkpoints (.pth files from train_realnvp_img.py)
-    └── mnist_visuals/ # Output plots (.png) & videos (.mp4) from MNIST generation script
+└── results/
+    ├── realnvp_2d/
+    │   ├── frames/
+    │   │   └── moons/         # Example dataset subdir
+    │   │       └── ... (frame_*.png files)
+    │   └── models/
+    │       └── (realnvp_2d_moons_final.pth) # Example saved model
+    ├── checkpoints/
+    │   └── (realnvp_mnist_best.pth)       # Example checkpoint
+    └── mnist_visuals/
+        ├── (mnist_generated_digit_7.png)  # Example plot output
+        └── (mnist_interpolation_10_to_20.mp4) # Example video output
 
 ## Usage Examples
 
