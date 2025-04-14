@@ -1,5 +1,5 @@
 # Normalizing-Flows
-This folder primarily consists of:
+This Repo primarily consists of:
 
 1.  **Implementations of the RealNVP Normalizing Flow architecture** \[[1]\]:
     *   Core affine coupling layers and model structure.
