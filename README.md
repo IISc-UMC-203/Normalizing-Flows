@@ -71,18 +71,12 @@ normalizing-flows
   - LICENSE
   - README.md
   - requirements.txt
-  - src
-      - layers.py
-      - models_2d.py
-      - models_img.py
-      - losses.py
-      - utils.py
-      - visualize.py
-  - scripts
-      - train_realnvp_2d.py
-      - train_realnvp_img.py
-      - generate_2d_video.py
-      - generate_mnist_visuals.py
+  - 2D.ipynb
+      -  Contains all the needed code related to applying Normalizing flow model on 2D toy datasets including video generation
+  - MNIST.ipynb
+      - Contains all the needed code related to applying Normalizing flow model on MNIST dataset including video generation
+  - CIFAR-10.ipynb
+      -  Contains all the needed code related to applying Normalizing flow model on CIFAR-10 dataset.
   - data
       - (datasets downloaded here automatically, typically gitignored)
   - results
@@ -98,55 +92,7 @@ normalizing-flows
           - (mnist_generated_digit_7.png)  # Example plot output
           - (mnist_interpolation_10_to_20.mp4) # Example video output
 
-## Usage Examples
 
-
-1.  **Train RealNVP on 2D Moons dataset and generate animation frames:**
-    ```bash
-    python -m scripts.train_realnvp_2d.py --dataset moons --epochs 300 --save_interval 5 --output_dir results/realnvp_2d --hidden_units 128 --num_coupling 8
-    python -m scripts.generate_2d_video.py --frame_dir results/realnvp_2d/frames/moons --output results/realnvp_2d/transformation_moons.mp4 --fps 15
-    ```
- 
-2.  **Train RealNVP on MNIST:**
-    ```bash
-    python -m scripts.train_realnvp_img --dataset mnist --epochs 15 --lr 5e-4 --batch_size 64 --num_coupling_multi 12 --num_coupling_final 4 --planes 64 --checkpoint_dir checkpoints --data_dir ./data
-    ```
-    
-3.  **Train RealNVP on CIFAR-10(using different parameters):**
-    ```bash
-    python -m scripts.train_realnvp_img.py --dataset cifar10 --epochs 20 --lr 5e-4 --batch_size 32 --num_coupling_multi 18 --num_coupling_final 4 --planes 64 --checkpoint_dir checkpoints --data_dir ./data
-    ```
-    
-4.  **Generate Specific MNIST Digit Samples:**
-    ```bash
-    python -m scripts.generate_mnist_visuals.py \
-    --checkpoint checkpoints/realnvp_mnist_best.pth \
-    --generate_digits 7 \
-    --num_generate 32 \
-    --num_ref 100 \
-    --noise_std 0.6 \
-    --output_dir results/mnist_visuals
-    ```
-
-5.  **Generate MNIST Interpolation Video Between two specific numbers:**
-    ```bash
-    python -m scripts.generate_mnist_visuals.py \
-    --checkpoint checkpoints/realnvp_mnist_best.pth \
-    --interpolate_pair 10 20 \
-    --interp_steps 60 \
-    --fps 15 \
-    --output_dir results/mnist_visuals
-    ```
-6.  **Generate MNIST Interpolation Grid Video:**
-    ```bash
-    python -m cripts.generate_mnist_visuals.py \
-    --checkpoint checkpoints/realnvp_mnist_best.pth \
-    --interpolate_grid \
-    --grid_rows 4 \
-    --interp_steps 120 \
-    --fps 15 \
-    --output_dir results/mnist_visuals
-    ```
 ## Results Summary: 
 
 *   **RealNVP BPD:** Achieved **1.59 BPD** on MNIST and **3.78 BPD** on CIFAR-10, demonstrating successful implementation (though further training could potentially improve scores, limited by computing resources).
