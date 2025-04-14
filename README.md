@@ -87,16 +87,16 @@ The project aims to provide a practical understanding of normalizing flows and d
     ```
 ## Project Structure:
 normalizing-flows/
-├── .gitignore # Files ignored by git
-├── LICENSE # Project license
-├── README.md # This file
-├── requirements.txt # Python dependencies
-│
-├── src/ # Core source code (models, layers, losses, utils)
-├── scripts/ # Runnable scripts for training, evaluation, generation
-├── notebooks/ # Jupyter notebooks for demos and visualization
-├── data/ # Data loading instructions/scripts (if needed)
-└── results/ # Default directory for outputs (models, plots, animations)
+├── .gitignore # Files ignored by git/
+├── LICENSE # Project license/
+├── README.md # This file/
+├── requirements.txt # Python dependencies/
+│/
+├── src/ # Core source code (models, layers, losses, utils)/
+├── scripts/ # Runnable scripts for training, evaluation, generation/
+├── notebooks/ # Jupyter notebooks for demos and visualization/
+├── data/ # Data loading instructions/scripts (if needed)/
+└── results/ # Default directory for outputs (models, plots, animations)//
 
 *   **RealNVP BPD:** Achieved **1.59 BPD** on MNIST and **3.78 BPD** on CIFAR-10, demonstrating successful implementation (though further training could potentially improve scores, limited by compute).
 *   **Visualizations:** Successfully generated animations showing 2D flow dynamics and smooth semantic interpolations in MNIST's latent space.
