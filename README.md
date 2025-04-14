@@ -66,35 +66,35 @@ All required Python packages are listed in `requirements.txt`.
 
 ## Project Structure:
 
-normalizing-flows/
+normalizing-flows
   - .gitignore
   - LICENSE
   - README.md
   - requirements.txt
-  - src/
+  - src
       - layers.py
       - models_2d.py
       - models_img.py
       - losses.py
       - utils.py
       - visualize.py
-  - scripts/
+  - scripts
       - train_realnvp_2d.py
       - train_realnvp_img.py
       - generate_2d_video.py
       - generate_mnist_visuals.py
-  - data/
+  - data
       - (datasets downloaded here automatically, typically gitignored)
-  - results/
-      - realnvp_2d/
-          - frames/
-              - moons/         # Example dataset subdir
+  - results
+      - realnvp_2d
+          - frames
+              - moons         # Example dataset subdir
                   - ... (frame_*.png files)
-          - models/
+          - models
               - (realnvp_2d_moons_final.pth) # Example saved model
-      - checkpoints/
+      - checkpoints
           - (realnvp_mnist_best.pth)       # Example checkpoint
-      - mnist_visuals/
+      - mnist_visuals
           - (mnist_generated_digit_7.png)  # Example plot output
           - (mnist_interpolation_10_to_20.mp4) # Example video output
 
