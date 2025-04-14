@@ -64,6 +64,36 @@ All required Python packages are listed in `requirements.txt`.
 *   **2D Datasets:** Generated automatically by `scripts/train_realnvp_2d.py`.
 *   **MNIST & CIFAR-10:** Downloaded automatically by `torchvision.datasets` via `scripts/train_realnvp_img.py` if not found in the specified `--data_dir` (default: `./data`).
 
+## Project Structure:
+normalizing-flows/
+├── .gitignore         
+├── LICENSE            
+├── README.md          # Project overview, setup, usage instructions
+├── requirements.txt   # Python dependencies (run: pip install -r requirements.txt)
+│
+├── src/               # Core source code modules (imported by scripts)
+│   ├── layers.py      # Coupling layers, ResNet blocks, custom BatchNorm etc.
+│   ├── models_2d.py   # RealNVP model definition for 2D data
+│   ├── models_img.py  # RealNVP multi-scale model definition for images
+│   ├── losses.py      # NLL Loss function implementations
+│   ├── utils.py       # Preprocessing, masking, device setup, other helpers
+│   └── visualize.py   # Plotting and video generation functions
+│
+├── scripts/          
+│   ├── train_realnvp_2d.py       # Train 2D models and save animation frames
+│   ├── train_realnvp_img.py      # Train MNIST/CIFAR-10 models & save checkpoints
+│   ├── generate_2d_video.py      # Compile 2D frames into an MP4 video
+│   └── generate_mnist_visuals.py # Generate MNIST samples & interpolation videos
+│
+├── data/              # Directory for datasets 
+│
+└── results/           # Default output directory (often gitignored)
+    ├── realnvp_2d/    # Outputs from the 2D training script
+    │   ├── frames/    # Saved animation frames (in subdirs per dataset, e.g., 'moons')
+    │   └── models/    # Saved 2D models (if --save_model is used)
+    ├── checkpoints/   # Saved image model checkpoints (.pth files from train_realnvp_img.py)
+    └── mnist_visuals/ # Output plots (.png) & videos (.mp4) from MNIST generation script
+
 ## Usage Examples
 
 
