@@ -18,12 +18,12 @@ The project aims to provide a practical understanding of normalizing flows and d
 
 ## Features
 
-*   **RealNVP Core Implementation (`src/`):** Modular code for affine coupling layers, ResNet blocks, custom BatchNorm, masking functions, and preprocessing utilities.
-*   **2D RealNVP Model & Training (`src/models_2d.py`, `scripts/train_realnvp_2d.py`):** Model tailored for 2D data with a script for training and generating visualization frames.
-*   **Multi-Scale Image RealNVP Model & Training (`src/models_img.py`, `scripts/train_realnvp_img.py`):** Flexible multi-scale architecture for MNIST/CIFAR-10 with a unified training script.
-*   **2D Flow Animation (`src/visualize.py`, `scripts/generate_2d_video.py`):** Utilities to visualize the 2D transformation and a script to compile frames into an MP4 video.
-*   **MNIST Latent Space Analysis (`src/visualize.py`, `scripts/generate_mnist_visuals.py`):** Functions and a script to generate samples conditioned on digits and create interpolation videos (single pair or grid).
-*   **Command-Line Interface:** Training and generation scripts utilize `argparse` for easy configuration.
+*   **RealNVP Core Implementation :** Modular code for affine coupling layers, ResNet blocks, custom BatchNorm, masking functions, and preprocessing utilities.
+*   **2D RealNVP Model & Training (`2D.ipynb`):** Model tailored for 2D data with a script for training and generating visualization frames.
+*   **Multi-Scale Image RealNVP Model & Training (`MNIST.ipynb`, `CIFAR-10.ipynb`):** Flexible multi-scale architecture for MNIST/CIFAR-10.
+*   **2D Flow Animation :** Utilities to visualize the 2D transformation and a script to compile frames into an MP4 video.
+*   **MNIST Latent Space Analysis :** Functions and a script to generate samples conditioned on digits and create interpolation videos (single pair or grid).
+
 
 ## Requirements
 
