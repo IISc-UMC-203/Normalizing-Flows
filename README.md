@@ -84,10 +84,8 @@ The project aims to provide a practical understanding of normalizing flows and d
     ```bash
     # Example using a script:
     python scripts/generate_mnist_interpolation.py --checkpoint results/models/realnvp_mnist.pth --idx1 1 --idx2 7 --steps 10 --output results/animations/mnist_interp_1_7.gif
-    # Or run the corresponding Jupyter Notebook:
-    # jupyter notebook notebooks/02_mnist_interpolation_demo.ipynb
     ```
-## Structure:
+## Project Structure:
 normalizing-flows/
 ├── .gitignore # Files ignored by git
 ├── LICENSE # Project license
