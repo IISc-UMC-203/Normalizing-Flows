@@ -118,7 +118,9 @@ All required Python packages are listed in `requirements.txt`.
 *   **RealNVP BPD:** Achieved **1.59 BPD** on MNIST and **3.78 BPD** on CIFAR-10, demonstrating successful implementation (though further training could potentially improve scores, limited by computing resources).
 *   **Visualizations:** Successfully generated animations showing 2D flow dynamics and smooth semantic interpolations in MNIST's latent space.
 
-## Note : This repository focuses on the implementation and understanding of RealNVP. It serves as a strong foundation before tackling more complex applications like solving inverse problems using Invertible Neural Networks.
+## Note : 
+
+This repository focuses on the implementation and understanding of RealNVP. It serves as a strong foundation before tackling more complex applications like solving inverse problems using Invertible Neural Networks.
 ## References
 
 [1] Dinh, L., Sohl-Dickstein, J., & Bengio, S. (2016). Density estimation using Real NVP. arXiv preprint arXiv:1605.08803.
@@ -127,4 +129,4 @@ All required Python packages are listed in `requirements.txt`.
 
 ## Contributors
 
-1. K.Sai Sandesh Reddy 
+* K.Sai Sandesh Reddy 
