@@ -65,41 +65,38 @@ All required Python packages are listed in `requirements.txt`.
 *   **MNIST & CIFAR-10:** Downloaded automatically by `torchvision.datasets` via `scripts/train_realnvp_img.py` if not found in the specified `--data_dir` (default: `./data`).
 
 ## Project Structure:
+
 normalizing-flows/
-├── .gitignore
-├── LICENSE
-├── README.md
-├── requirements.txt
-│
-├── src/
-│   ├── layers.py
-│   ├── models_2d.py
-│   ├── models_img.py
-│   ├── losses.py
-│   ├── utils.py
-│   └── visualize.py
-│
-├── scripts/
-│   ├── train_realnvp_2d.py
-│   ├── train_realnvp_img.py
-│   ├── generate_2d_video.py
-│   └── generate_mnist_visuals.py
-│
-├── data/
-│   └── (datasets downloaded here automatically, typically gitignored)
-│
-└── results/
-    ├── realnvp_2d/
-    │   ├── frames/
-    │   │   └── moons/         # Example dataset subdir
-    │   │       └── ... (frame_*.png files)
-    │   └── models/
-    │       └── (realnvp_2d_moons_final.pth) # Example saved model
-    ├── checkpoints/
-    │   └── (realnvp_mnist_best.pth)       # Example checkpoint
-    └── mnist_visuals/
-        ├── (mnist_generated_digit_7.png)  # Example plot output
-        └── (mnist_interpolation_10_to_20.mp4) # Example video output
+  - .gitignore
+  - LICENSE
+  - README.md
+  - requirements.txt
+  - src/
+      - layers.py
+      - models_2d.py
+      - models_img.py
+      - losses.py
+      - utils.py
+      - visualize.py
+  - scripts/
+      - train_realnvp_2d.py
+      - train_realnvp_img.py
+      - generate_2d_video.py
+      - generate_mnist_visuals.py
+  - data/
+      - (datasets downloaded here automatically, typically gitignored)
+  - results/
+      - realnvp_2d/
+          - frames/
+              - moons/         # Example dataset subdir
+                  - ... (frame_*.png files)
+          - models/
+              - (realnvp_2d_moons_final.pth) # Example saved model
+      - checkpoints/
+          - (realnvp_mnist_best.pth)       # Example checkpoint
+      - mnist_visuals/
+          - (mnist_generated_digit_7.png)  # Example plot output
+          - (mnist_interpolation_10_to_20.mp4) # Example video output
 
 ## Usage Examples
 
