@@ -1,0 +1,18 @@
+# requirements
+
+# Core deep learning framework
+torch
+torchvision
+
+# Numerical and data handling
+numpy
+pandas
+
+# Plotting and image/video handling
+matplotlib
+imageio
+imageio-ffmpeg # Recommended backend for reliable video saving with imageio
+
+# Utilities
+scikit-learn # For sklearn.datasets and sklearn.preprocessing
+tqdm         # For progress bars
