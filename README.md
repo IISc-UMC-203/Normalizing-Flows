@@ -79,18 +79,19 @@ normalizing-flows
       -  Contains all the needed code related to applying Normalizing flow model on CIFAR-10 dataset.
   - data
       - (datasets downloaded here automatically, typically gitignored)
-  - results
-      - realnvp_2d
-          - frames
-              - moons         # Example dataset subdir
-                  - ... (frame_*.png files)
-          - models
-              - (realnvp_2d_moons_final.pth) # Example saved model
-      - checkpoints
-          - (realnvp_mnist_best.pth)       # Example checkpoint
-      - mnist_visuals
-          - (mnist_generated_digit_7.png)  # Example plot output
-          - (mnist_interpolation_10_to_20.mp4) # Example video output
+  - checkpoints
+      -contains the trained models for both MNIST and CIFAR-10
+      - example : mnist-i.model (i for epoch)
+   - anim_frames_2d_videos
+       - frames
+           - moons         # Example dataset subdir
+               - ... (frame_*.png files)
+       - transformation_circles.mp4
+       - transformation_moons.mp4
+   - mnist_visuals
+       - (mnist_generated_digit_7.png)  # Example plot output ( all possible generated numbers for digit 7) 
+       - (mnist_interpolation_10_to_20.mp4) # Example video output (10 and 20 are the source and traget indicies)
+       - (mnist_interpolation_grid.mp4) # Contains a grid of random numbers transforming 
 
 
 ## Results Summary: 
